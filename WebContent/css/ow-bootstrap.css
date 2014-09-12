@@ -1,0 +1,16 @@
+.lps-navbar-inner {
+	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+	padding-right: 0;
+	padding-left: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border-width: 0 0 1px;
+	min-height: 40px;
+	background-color: #fafafa;
+	background-image: linear-gradient(to bottom,#fff,#f2f2f2);
+	background-repeat: repeat-x;
+	border: 1px solid #d4d4d4;
+}

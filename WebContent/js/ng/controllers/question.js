@@ -1,0 +1,2 @@
+function Question($scope) {
+}

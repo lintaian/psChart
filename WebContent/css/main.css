@@ -1,0 +1,18 @@
+body{
+	background: #FFF url(../img/bg4.jpg) no-repeat 0 0 fixed;
+}
+
+.ng-hide {
+	display: none;
+}
+
+.navbar .nav>li>a {
+	color: #000!important;
+	text-shadow: none!important;
+}
+.navbar .nav>.active>a {
+	background: rgb(214,231,241)!important;
+}
+th,td {
+	text-align: center!important;
+}
