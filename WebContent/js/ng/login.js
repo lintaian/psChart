@@ -8,7 +8,6 @@ require.config({
 		bootstrap: '../lib/bootstrap',
 		angularResource: '../lib/angular-resource',
 		angularRoute: '../lib/angular-route',
-		util: '../plugin/util',
 		resource: 'services/resource',
 		filter: 'filters/filters',
 		app: 'modules/login',
@@ -25,7 +24,7 @@ require.config({
 });
 
 require(['angular', 'angularResource', 'angularRoute', 'jquery', 'bootstrap',
-         'util', 'resource', 'filter', 
+         'resource', 'filter', 
          'app', 'appCtrl'], function (angular) {
 	angular.bootstrap(document, ['loginApp']);
 });

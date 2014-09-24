@@ -1,4 +1,9 @@
 function Main($scope, $rootScope, $timeout, $interval, $location, User) {
+//	if (angular.isUndefined($scope.query) && 
+//			($location.path() != '' || $location.path() != '/')) {
+//		window.location.href = 'main#/';
+//	}
+	console.log($location.path());
 	
 	$scope.page = {
 		current: '',
@@ -11,11 +16,15 @@ function Main($scope, $rootScope, $timeout, $interval, $location, User) {
 	};
 	
 	
-	
 	$(function() {
 		resize();
 		$(window).resize(function() {
 			resize();
+		});
+		$('body').on('change', 'input.checkbox', function(e) {
+			console.log('aa');
+			e.stopPropagation();
+			e.preventDefault();
 		});
 	});
 	$scope.getTableHeight = function() {

@@ -78,10 +78,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
             </li>
 			<li data-ng-class="{active: page.current=='c6'}">
-				<a href="javascript:;" data-ng-click="page.change('c6', '')">能力值</a>
+				<a href="javascript:;" data-ng-click="page.change('', 'c6')">能力值</a>
 			</li>
 			<li data-ng-class="{active: page.current=='c7'}">
-				<a href="javascript:;" data-ng-click="page.change('c7', '')">达标</a>
+				<a href="javascript:;" data-ng-click="page.change('', 'c7')">达标</a>
 			</li>
 			<li class="dropdown" data-ng-class="{active: page.current=='c8'}">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">各科均分<b class="caret"></b></a>
@@ -95,10 +95,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
             </li>
 			<li data-ng-class="{active: page.current=='c9'}">
-				<a href="javascript:;" data-ng-click="page.change('c9', '')">成绩报告单</a>
+				<a href="javascript:;" data-ng-click="page.change('', 'c9', '')">成绩报告单</a>
 			</li>
 			<li data-ng-class="{active: page.current=='c10'}">
-				<a href="javascript:;" data-ng-click="page.change('c10', '')">基本统计量</a>
+				<a href="javascript:;" data-ng-click="page.change('', 'c10', '')">基本统计量</a>
 			</li>
 		</ul>
 	  </div>

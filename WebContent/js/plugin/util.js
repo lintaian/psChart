@@ -1,8 +1,73 @@
-define(['jquery'], function(jquery) {
-	(function($) {
+define([ 'jquery', 'echarts' ], function(jquery, echarts) {
+	(function($, echarts) {
 		var Util = function() {
-			
+
 		};
+		Util.chartIds = [];
+		Util.getOption = function(config) {
+			var option = {
+				title : {
+					text : config.title,
+					x:'center'
+				},
+				tooltip : {
+					trigger : 'axis',
+					position: function(p) {
+						return [p[0] -40, p[1]]
+					}
+				},
+				legend : config.legend,
+				toolbox : {
+					show : false,
+					feature : {
+						saveAsImage : {
+							show : true
+						}
+					}
+				},
+				series : config.series
+			}
+			switch (config.type) {
+			case 'radar':
+				option.polar = config.polar;
+				break;
+			default:
+				option.xAxis = [{
+					type : 'category',
+					boundaryGap : config.boundaryGap,
+					axisLabel : {
+						interval : 0
+					},
+					data : config.xAxis
+				}];
+				option.yAxis = config.yAxis;
+				break;
+			}
+			return option;
+		}
+		
+		Util.resizeDiv = function(id, rate) {
+			var width = Util.getWinWidth();
+			width = width * rate;
+			$('#'+id).width(width);
+		}
+		
+		Util.initChart = function(option, id, cloneId, rate) {
+			rate ? Util.resizeDiv(id, rate) : null;
+			if(arguments.length >= 3 && cloneId != null && cloneId != '') {
+				var clone = $('#' + id).clone();
+				clone.attr('id', cloneId);
+				clone.show();
+				$('#' + id).after(clone);
+				id = cloneId;
+			}
+			var myChart = echarts.init(document.getElementById(id));
+			myChart.setOption(option);
+//			$('#' + id).data('echart', myChart);
+//			Util.chartIds.push(id);
+		}
+		
+		
 		/**
 		 * post访问后台
 		 * @param url
@@ -210,9 +275,9 @@ define(['jquery'], function(jquery) {
 		    tableColumn.offset(tableLayout.offset());
 		    tableData.offset(tableLayout.offset());
 		};
-
+		
 		if (!window.Util) {
 			window['Util'] = Util;
 		}
-	})(jquery);
+	})(jquery, echarts);
 });

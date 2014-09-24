@@ -8,6 +8,11 @@ require.config({
 		bootstrap: '../lib/bootstrap',
 		angularResource: '../lib/angular-resource',
 		angularRoute: '../lib/angular-route',
+		echarts: '../lib/echarts',
+		'echarts/chart/bar': '../lib/echarts',
+    	'echarts/chart/line': '../lib/echarts',
+    	'echarts/chart/pie': '../lib/echarts',
+    	'echarts/chart/radar': '../lib/echarts',
 		filter: 'filters/filters',
 		resource: 'services/resource',
 		dialog: 'directives/dialog',
@@ -32,6 +37,8 @@ require.config({
 });
 
 require(['angular', 'angularResource', 'angularRoute', 'jquery', 'bootstrap',
+         'echarts', 'echarts/chart/bar', 'echarts/chart/radar',
+         'echarts/chart/line', 'echarts/chart/pie', 
          'filter', 'resource', 'util', 'dialog', 'loading', 'app', 
          'appCtrl', 'indexCtrl', 'questionCtrl'], function (angular) {
 	angular.bootstrap(document, ['mainApp']);

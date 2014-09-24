@@ -1,5 +1,6 @@
 body{
 	background: #FFF url(../img/bg4.jpg) no-repeat 0 0 fixed;
+	overflow-x: hidden; 
 }
 
 .ng-hide {
@@ -15,4 +16,24 @@ body{
 }
 th,td {
 	text-align: center!important;
+}
+
+.title {
+	padding: 7px 10px 0 10px;
+}
+.main {
+	padding: 5px;
+}
+.v-cb {
+	width: 14px;
+	height: 14px;
+	background: url("../img/un-checked.png");
+}
+.v-cb.v-checked {
+	background: url("../img/checked.png");
+}
+.chart {
+	float: left;
+	height: 500px;
+	width: 800px;
 }
