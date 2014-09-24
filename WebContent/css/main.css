@@ -37,3 +37,9 @@ th,td {
 	height: 500px;
 	width: 800px;
 }
+.btn-choose {
+	width: 162px;
+}
+.algin-left {
+	text-align: left;
+}

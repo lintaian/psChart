@@ -1,5 +1,5 @@
-define([ 'jquery', 'echarts' ], function(jquery, echarts) {
-	(function($, echarts) {
+define([ 'jquery', 'echarts', 'macarons'], function(jquery, echarts, macarons) {
+	(function($, echarts, macarons) {
 		var Util = function() {
 
 		};
@@ -61,7 +61,7 @@ define([ 'jquery', 'echarts' ], function(jquery, echarts) {
 				$('#' + id).after(clone);
 				id = cloneId;
 			}
-			var myChart = echarts.init(document.getElementById(id));
+			var myChart = echarts.init(document.getElementById(id), macarons);
 			myChart.setOption(option);
 //			$('#' + id).data('echart', myChart);
 //			Util.chartIds.push(id);
@@ -279,5 +279,5 @@ define([ 'jquery', 'echarts' ], function(jquery, echarts) {
 		if (!window.Util) {
 			window['Util'] = Util;
 		}
-	})(jquery, echarts);
+	})(jquery, echarts, macarons);
 });

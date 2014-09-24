@@ -6,7 +6,7 @@ function Main($scope, $rootScope, $timeout, $interval, $location, User) {
 	console.log($location.path());
 	
 	$scope.page = {
-		current: '',
+		current: 'c1',
 		sub: '',
 		change: function(url, code, sub) {
 			this.current = code;

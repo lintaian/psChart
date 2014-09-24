@@ -9,6 +9,7 @@ require.config({
 		angularResource: '../lib/angular-resource',
 		angularRoute: '../lib/angular-route',
 		echarts: '../lib/echarts',
+		macarons: '../lib/macarons',
 		'echarts/chart/bar': '../lib/echarts',
     	'echarts/chart/line': '../lib/echarts',
     	'echarts/chart/pie': '../lib/echarts',
@@ -21,7 +22,8 @@ require.config({
 		app: 'modules/main',
 		appCtrl: 'controllers/main',
 		indexCtrl: 'controllers/index',
-		questionCtrl: 'controllers/question'
+		questionCtrl: 'controllers/question',
+		oqaCtrl: 'controllers/oqAnalysis'
 	},
 	shim: {
 		angular: {
@@ -37,9 +39,9 @@ require.config({
 });
 
 require(['angular', 'angularResource', 'angularRoute', 'jquery', 'bootstrap',
-         'echarts', 'echarts/chart/bar', 'echarts/chart/radar',
+         'echarts', 'macarons', 'echarts/chart/bar', 'echarts/chart/radar',
          'echarts/chart/line', 'echarts/chart/pie', 
          'filter', 'resource', 'util', 'dialog', 'loading', 'app', 
-         'appCtrl', 'indexCtrl', 'questionCtrl'], function (angular) {
+         'appCtrl', 'indexCtrl', 'questionCtrl', 'oqaCtrl'], function (angular) {
 	angular.bootstrap(document, ['mainApp']);
 });

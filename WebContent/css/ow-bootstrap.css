@@ -14,3 +14,9 @@
 	background-repeat: repeat-x;
 	border: 1px solid #d4d4d4;
 }
+.caret {
+	float: right;
+}
+td {
+	vertical-align: middle!important;
+}

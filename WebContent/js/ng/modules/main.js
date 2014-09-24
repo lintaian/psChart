@@ -7,6 +7,7 @@ define(['angular'], function (angular) {
 		  $routeProvider.
 		      when('/', {templateUrl: 'tpl/index.html', controller: Index}).
 		      when('/question', {templateUrl: 'tpl/question.html', controller: Question}).
+		      when('/OQAnalysis', {templateUrl: 'tpl/OQAnalysis.html', controller: OQAnalysis}).
 		      otherwise({redirectTo: '/'});
 		  $sceProvider.enabled(false);
 	  }]);
